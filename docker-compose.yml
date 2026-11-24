@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  honeyagent:
+    build: .
+    container_name: honeyagent-listener
+    ports:
+      - "8888:8888"
+    environment:
+      - HONEYAGENT_SECRET=honeyagent_production_hmac_secret_key_change_me
+    volumes:
+      - honeyagent_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  honeyagent_data:

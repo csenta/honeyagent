@@ -1,0 +1,18 @@
+# HoneyAgent Default Configuration
+
+server:
+  host: "0.0.0.0"
+  port: 8888
+  public_url: "http://localhost:8888"
+
+security:
+  hmac_secret: "honeyagent_default_master_secret_change_in_production"
+  token_prefix: "ht_"
+
+storage:
+  registry_path: "honeyagent_registry.json"
+  incident_log_path: "honeyagent_incidents.jsonl"
+
+alerts:
+  webhook_url: "" # Optional Slack/Discord/SIEM webhook URL
+  log_level: "INFO"
