@@ -1,8 +1,10 @@
 # HoneyAgent 🍯
 
+> **Status:** prototype. A personal security-research project, not a production product. Expect rough edges; issues and pull requests are welcome.
+
 > **Autonomous Honeytoken & Decoy Injection Orchestrator for LLM Agents & RAG Pipelines**
 
-HoneyAgent is an enterprise-grade deception technology platform designed specifically for modern LLM applications, autonomous agent workflows, and Retrieval-Augmented Generation (RAG) vector pipelines.
+HoneyAgent is a prototype deception technology platform designed specifically for modern LLM applications, autonomous agent workflows, and Retrieval-Augmented Generation (RAG) vector pipelines.
 
 It plants realistic, HMAC-signed honeytokens (cloud credentials, bearer tokens, database DSNs, and canary document beacons) inside document corpora, knowledge bases, and agent tool spaces. When an adversary or rogue agent accesses, exfiltrates, or invokes these decoy credentials, HoneyAgent triggers immediate SIEM intrusion alerts with cryptographic provenance attribution.
 
@@ -108,3 +110,7 @@ Or standalone:
 docker build -t honeyagent .
 docker run -p 8888:8888 -e HONEYAGENT_SECRET="prod_secret" honeyagent
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
